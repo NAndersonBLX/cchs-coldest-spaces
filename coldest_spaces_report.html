@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="3600">  <!-- Auto-refresh every hour (3600 seconds) -->
+    <title>Covenant Christian HS - Coldest Spaces</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ecf0f1;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            color: #2c3e50;
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+        
+        .widgets-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .widget {
+            background-color: #3498db;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            min-width: 200px;
+            max-width: 220px;
+            margin: 10px;
+            transition: transform 0.2s;
+        }
+        
+        .widget:hover {
+            transform: translateY(-5px);
+        }
+        
+        .widget-rank {
+            background-color: rgba(0,0,0,0.2);
+            padding: 5px;
+            border-radius: 10px 10px 0 0;
+            text-align: center;
+        }
+        
+        .widget-rank h3 {
+            margin: 0;
+            color: white;
+            font-size: 20px;
+        }
+        
+        .widget-content {
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .widget-temp {
+            margin: 10px 0;
+            color: white;
+            font-size: 36px;
+            font-weight: bold;
+        }
+        
+        .widget-name {
+            margin: 5px 0;
+            color: white;
+            font-size: 14px;
+            font-weight: 500;
+            min-height: 40px;
+        }
+        
+        .widget-divider {
+            border: none;
+            border-top: 1px solid rgba(255,255,255,0.3);
+            margin: 15px 0;
+        }
+        
+        .widget-setpoint {
+            margin: 5px 0;
+        }
+        
+        .widget-setpoint-label {
+            margin: 2px 0;
+            color: rgba(255,255,255,0.8);
+            font-size: 12px;
+        }
+        
+        .widget-setpoint-value {
+            margin: 2px 0;
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        
+        .widget-deviation {
+            margin: 2px 0;
+            font-size: 13px;
+            font-weight: bold;
+            padding: 5px;
+            border-radius: 5px;
+            background-color: rgba(255,255,255,0.9);
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #7f8c8d;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Covenant Christian HS - Coldest Spaces Monitor</h1>
+        <p>Last Updated: January 28, 2026 at 12:12:53 PM</p>
+        <p style="font-style: italic; margin-top: 5px;">Auto-refreshes every hour</p>
+    </div>
+    
+    <div class="widgets-container">
+
+        <div class="widget" style="background-color: rgb(25, 25, 112);">
+            <div class="widget-rank">
+                <h3>#1</h3>
+            </div>
+            <div class="widget-content">
+                <div class="widget-temp">62.1°F</div>
+                <div class="widget-name">FPVAV_D12</div>
+                <hr class="widget-divider">
+                <div class="widget-setpoint">
+                    <div class="widget-setpoint-label">Heating SP:</div>
+                    <div class="widget-setpoint-value">70.0°F</div>
+                </div>
+                <div class="widget-setpoint">
+                    <div class="widget-setpoint-label">Cooling SP:</div>
+                    <div class="widget-setpoint-value">73.0°F</div>
+                </div>
+                <hr class="widget-divider">
+                <div class="widget-setpoint">
+                    <div class="widget-setpoint-label">Deviation:</div>
+                    <div class="widget-deviation" style="color: #3498db;">7.9°F below heating setpoint</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="widget" style="background-color: rgb(52, 70, 146);">
+            <div class="widget-rank">
+                <h3>#2</h3>
+            </div>
+            <div class="widget-content">
+                <div class="widget-temp">63.1°F</div>
+                <div class="widget-name">FPVAV_D6</div>
+                <hr class="widget-divider">
+                <div class="widget-setpoint">
+                    <div class="widget-setpoint-label">Heating SP:</div>
+                    <div class="widget-setpoint-value">70.0°F</div>
+                </div>
+                <div class="widget-setpoint">
+                    <div class="widget-setpoint-label">Cooling SP:</div>
+                    <div class="widget-setpoint-value">73.0°F</div>
+                </div>
+                <hr class="widget-divider">
+                <div class="widget-setpoint">
+                    <div class="widget-setpoint-label">Deviation:</div>
+                    <div class="widget-deviation" style="color: #3498db;">6.9°F below heating setpoint</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="widget" style="background-color: rgb(52, 70, 146);">
+            <div class="widget-rank">
+                <h3>#3</h3>
+            </div>
+            <div class="widget-content">
+                <div class="widget-temp">63.1°F</div>
+                <div class="widget-name">FPVAV_D10</div>
+                <hr class="widget-divider">
+                <div class="widget-setpoint">
+                    <div class="widget-setpoint-label">Heating SP:</div>
+                    <div class="widget-setpoint-value">70.0°F</div>
+                </div>
+                <div class="widget-setpoint">
+                    <div class="widget-setpoint-label">Cooling SP:</div>
+                    <div class="widget-setpoint-value">73.0°F</div>
+                </div>
+                <hr class="widget-divider">
+                <div class="widget-setpoint">
+                    <div class="widget-setpoint-label">Deviation:</div>
+                    <div class="widget-deviation" style="color: #3498db;">6.9°F below heating setpoint</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="widget" style="background-color: rgb(101, 151, 208);">
+            <div class="widget-rank">
+                <h3>#4</h3>
+            </div>
+            <div class="widget-content">
+                <div class="widget-temp">64.9°F</div>
+                <div class="widget-name">FPVAV_C2</div>
+                <hr class="widget-divider">
+                <div class="widget-setpoint">
+                    <div class="widget-setpoint-label">Heating SP:</div>
+                    <div class="widget-setpoint-value">70.0°F</div>
+                </div>
+                <div class="widget-setpoint">
+                    <div class="widget-setpoint-label">Cooling SP:</div>
+                    <div class="widget-setpoint-value">73.0°F</div>
+                </div>
+                <hr class="widget-divider">
+                <div class="widget-setpoint">
+                    <div class="widget-setpoint-label">Deviation:</div>
+                    <div class="widget-deviation" style="color: #3498db;">5.1°F below heating setpoint</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="widget" style="background-color: rgb(135, 206, 250);">
+            <div class="widget-rank">
+                <h3>#5</h3>
+            </div>
+            <div class="widget-content">
+                <div class="widget-temp">66.1°F</div>
+                <div class="widget-name">FPVAV_A7</div>
+                <hr class="widget-divider">
+                <div class="widget-setpoint">
+                    <div class="widget-setpoint-label">Heating SP:</div>
+                    <div class="widget-setpoint-value">70.0°F</div>
+                </div>
+                <div class="widget-setpoint">
+                    <div class="widget-setpoint-label">Cooling SP:</div>
+                    <div class="widget-setpoint-value">74.0°F</div>
+                </div>
+                <hr class="widget-divider">
+                <div class="widget-setpoint">
+                    <div class="widget-setpoint-label">Deviation:</div>
+                    <div class="widget-deviation" style="color: #3498db;">3.9°F below heating setpoint</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+    <div class="footer">
+        <p>Generated by BuildingLogiX</p>
+    </div>
+</body>
+</html>
