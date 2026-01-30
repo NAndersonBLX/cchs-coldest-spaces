@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="3600">  <!-- Auto-refresh every hour (3600 seconds) -->
-    <title>Covenant Christian HS - Coldest Spaces</title>
+    <meta http-equiv="refresh" content="3600">
+    <title>Covenant Christian HS - Building Monitor</title>
     <style>
         * {
             margin: 0;
@@ -35,6 +35,15 @@
             font-size: 14px;
         }
         
+        .section-title {
+            text-align: center;
+            color: #2c3e50;
+            font-size: 24px;
+            margin: 40px 0 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #3498db;
+        }
+        
         .widgets-container {
             display: flex;
             justify-content: space-around;
@@ -45,17 +54,24 @@
         }
         
         .widget {
-            background-color: #3498db;
             border-radius: 15px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-            min-width: 200px;
-            max-width: 220px;
             margin: 10px;
             transition: transform 0.2s;
         }
         
         .widget:hover {
             transform: translateY(-5px);
+        }
+        
+        .widget-large {
+            min-width: 200px;
+            max-width: 220px;
+        }
+        
+        .widget-small {
+            min-width: 160px;
+            max-width: 180px;
         }
         
         .widget-rank {
@@ -68,59 +84,82 @@
         .widget-rank h3 {
             margin: 0;
             color: white;
-            font-size: 20px;
+            font-size: 18px;
         }
         
         .widget-content {
-            padding: 20px;
+            padding: 15px;
             text-align: center;
         }
         
         .widget-temp {
-            margin: 10px 0;
+            margin: 8px 0;
             color: white;
-            font-size: 36px;
+            font-size: 32px;
+            font-weight: bold;
+        }
+        
+        .widget-percent {
+            margin: 8px 0;
+            font-size: 28px;
             font-weight: bold;
         }
         
         .widget-name {
             margin: 5px 0;
             color: white;
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 500;
-            min-height: 40px;
+            min-height: 35px;
         }
         
         .widget-divider {
             border: none;
             border-top: 1px solid rgba(255,255,255,0.3);
-            margin: 15px 0;
+            margin: 12px 0;
         }
         
         .widget-setpoint {
-            margin: 5px 0;
+            margin: 4px 0;
         }
         
         .widget-setpoint-label {
             margin: 2px 0;
             color: rgba(255,255,255,0.8);
-            font-size: 12px;
+            font-size: 11px;
         }
         
         .widget-setpoint-value {
             margin: 2px 0;
             color: white;
-            font-size: 14px;
+            font-size: 13px;
             font-weight: bold;
         }
         
         .widget-deviation {
             margin: 2px 0;
-            font-size: 13px;
+            font-size: 12px;
             font-weight: bold;
-            padding: 5px;
+            padding: 4px;
             border-radius: 5px;
             background-color: rgba(255,255,255,0.9);
+        }
+        
+        .widget-status {
+            margin: 8px 0;
+            font-size: 11px;
+            font-weight: bold;
+            padding: 6px;
+            border-radius: 5px;
+            background-color: rgba(255,255,255,0.9);
+        }
+        
+        .status-outside {
+            color: #e74c3c;
+        }
+        
+        .status-ok {
+            color: #27ae60;
         }
         
         .footer {
@@ -133,19 +172,20 @@
 </head>
 <body>
     <div class="header">
-        <h1>Covenant Christian HS - Coldest Spaces Monitor</h1>
-        <p>Last Updated: January 30, 2026 at 11:00:45 AM</p>
+        <h1>Covenant Christian HS - Building Monitor</h1>
+        <p>Last Updated: January 30, 2026 at 11:21:40 AM</p>
         <p style="font-style: italic; margin-top: 5px;">Auto-refreshes every hour</p>
     </div>
     
+    <h2 class="section-title">❄️ Coldest 5 Spaces</h2>
     <div class="widgets-container">
 
-        <div class="widget" style="background-color: rgb(25, 25, 112);">
+        <div class="widget widget-large" style="background-color: rgb(25, 25, 112);">
             <div class="widget-rank">
                 <h3>#1</h3>
             </div>
             <div class="widget-content">
-                <div class="widget-temp">60.4°F</div>
+                <div class="widget-temp">61.4°F</div>
                 <div class="widget-name">FPVAV_D12</div>
                 <hr class="widget-divider">
                 <div class="widget-setpoint">
@@ -159,17 +199,17 @@
                 <hr class="widget-divider">
                 <div class="widget-setpoint">
                     <div class="widget-setpoint-label">Deviation:</div>
-                    <div class="widget-deviation" style="color: #3498db;">9.6°F below heating setpoint</div>
+                    <div class="widget-deviation" style="color: #3498db;">8.6°F below heating SP</div>
                 </div>
             </div>
         </div>
 
-        <div class="widget" style="background-color: rgb(65, 91, 162);">
+        <div class="widget widget-large" style="background-color: rgb(59, 81, 154);">
             <div class="widget-rank">
                 <h3>#2</h3>
             </div>
             <div class="widget-content">
-                <div class="widget-temp">62.1°F</div>
+                <div class="widget-temp">62.7°F</div>
                 <div class="widget-name">FPVAV_D10</div>
                 <hr class="widget-divider">
                 <div class="widget-setpoint">
@@ -183,17 +223,17 @@
                 <hr class="widget-divider">
                 <div class="widget-setpoint">
                     <div class="widget-setpoint-label">Deviation:</div>
-                    <div class="widget-deviation" style="color: #3498db;">7.9°F below heating setpoint</div>
+                    <div class="widget-deviation" style="color: #3498db;">7.3°F below heating SP</div>
                 </div>
             </div>
         </div>
 
-        <div class="widget" style="background-color: rgb(72, 103, 172);">
+        <div class="widget widget-large" style="background-color: rgb(72, 102, 171);">
             <div class="widget-rank">
                 <h3>#3</h3>
             </div>
             <div class="widget-content">
-                <div class="widget-temp">62.4°F</div>
+                <div class="widget-temp">63.2°F</div>
                 <div class="widget-name">FPVAV_D9</div>
                 <hr class="widget-divider">
                 <div class="widget-setpoint">
@@ -207,17 +247,17 @@
                 <hr class="widget-divider">
                 <div class="widget-setpoint">
                     <div class="widget-setpoint-label">Deviation:</div>
-                    <div class="widget-deviation" style="color: #3498db;">7.6°F below heating setpoint</div>
+                    <div class="widget-deviation" style="color: #3498db;">6.8°F below heating SP</div>
                 </div>
             </div>
         </div>
 
-        <div class="widget" style="background-color: rgb(123, 186, 234);">
+        <div class="widget widget-large" style="background-color: rgb(121, 184, 233);">
             <div class="widget-rank">
                 <h3>#4</h3>
             </div>
             <div class="widget-content">
-                <div class="widget-temp">64.5°F</div>
+                <div class="widget-temp">65.1°F</div>
                 <div class="widget-name">FPVAV_A16</div>
                 <hr class="widget-divider">
                 <div class="widget-setpoint">
@@ -231,18 +271,18 @@
                 <hr class="widget-divider">
                 <div class="widget-setpoint">
                     <div class="widget-setpoint-label">Deviation:</div>
-                    <div class="widget-deviation" style="color: #3498db;">6.5°F below heating setpoint</div>
+                    <div class="widget-deviation" style="color: #3498db;">5.9°F below heating SP</div>
                 </div>
             </div>
         </div>
 
-        <div class="widget" style="background-color: rgb(135, 206, 250);">
+        <div class="widget widget-large" style="background-color: rgb(135, 206, 250);">
             <div class="widget-rank">
                 <h3>#5</h3>
             </div>
             <div class="widget-content">
-                <div class="widget-temp">65.0°F</div>
-                <div class="widget-name">FPVAV_D6</div>
+                <div class="widget-temp">65.6°F</div>
+                <div class="widget-name">FPVAV_A7</div>
                 <hr class="widget-divider">
                 <div class="widget-setpoint">
                     <div class="widget-setpoint-label">Heating SP:</div>
@@ -250,13 +290,128 @@
                 </div>
                 <div class="widget-setpoint">
                     <div class="widget-setpoint-label">Cooling SP:</div>
-                    <div class="widget-setpoint-value">73.0°F</div>
+                    <div class="widget-setpoint-value">74.0°F</div>
                 </div>
                 <hr class="widget-divider">
                 <div class="widget-setpoint">
                     <div class="widget-setpoint-label">Deviation:</div>
-                    <div class="widget-deviation" style="color: #3498db;">5.0°F below heating setpoint</div>
+                    <div class="widget-deviation" style="color: #3498db;">4.4°F below heating SP</div>
                 </div>
+            </div>
+        </div>
+
+    </div>
+    
+    <h2 class="section-title">⚠️ Top 5 Problem Units (Last 24 Hours)</h2>
+    <div class="widgets-container">
+
+        <div class="widget widget-small" style="background-color: rgb(80, 80, 80);">
+            <div class="widget-rank" style="background-color: rgba(0,0,0,0.15);">
+                <h3 style="color: white;">#1</h3>
+            </div>
+            <div class="widget-content">
+                <div class="widget-percent" style="color: white;">100.0%</div>
+                <div class="widget-setpoint-label" style="color: white; opacity: 0.8;">Time Outside Setpoint</div>
+                <div class="widget-name" style="color: white;">FPVAV_D1</div>
+                <hr class="widget-divider" style="border-top-color: rgba(0,0,0,0.2);">
+                <div class="widget-setpoint">
+                    <div class="widget-setpoint-label" style="color: white;">Current Temp:</div>
+                    <div class="widget-setpoint-value" style="color: white;">68.1°F</div>
+                </div>
+                <div class="widget-setpoint">
+                    <div class="widget-setpoint-label" style="color: white;">Heating / Cooling SP:</div>
+                    <div class="widget-setpoint-value" style="color: white;">70.0°F / 74.0°F</div>
+                </div>
+                <hr class="widget-divider" style="border-top-color: rgba(0,0,0,0.2);">
+                <div class="widget-status status-outside">Currently too cold</div>
+            </div>
+        </div>
+
+        <div class="widget widget-small" style="background-color: rgb(88, 88, 88);">
+            <div class="widget-rank" style="background-color: rgba(0,0,0,0.15);">
+                <h3 style="color: white;">#2</h3>
+            </div>
+            <div class="widget-content">
+                <div class="widget-percent" style="color: white;">95.1%</div>
+                <div class="widget-setpoint-label" style="color: white; opacity: 0.8;">Time Outside Setpoint</div>
+                <div class="widget-name" style="color: white;">FPVAV_A16</div>
+                <hr class="widget-divider" style="border-top-color: rgba(0,0,0,0.2);">
+                <div class="widget-setpoint">
+                    <div class="widget-setpoint-label" style="color: white;">Current Temp:</div>
+                    <div class="widget-setpoint-value" style="color: white;">65.1°F</div>
+                </div>
+                <div class="widget-setpoint">
+                    <div class="widget-setpoint-label" style="color: white;">Heating / Cooling SP:</div>
+                    <div class="widget-setpoint-value" style="color: white;">71.0°F / 74.0°F</div>
+                </div>
+                <hr class="widget-divider" style="border-top-color: rgba(0,0,0,0.2);">
+                <div class="widget-status status-outside">Currently too cold</div>
+            </div>
+        </div>
+
+        <div class="widget widget-small" style="background-color: rgb(88, 88, 88);">
+            <div class="widget-rank" style="background-color: rgba(0,0,0,0.15);">
+                <h3 style="color: white;">#3</h3>
+            </div>
+            <div class="widget-content">
+                <div class="widget-percent" style="color: white;">95.1%</div>
+                <div class="widget-setpoint-label" style="color: white; opacity: 0.8;">Time Outside Setpoint</div>
+                <div class="widget-name" style="color: white;">FPVAV_D10</div>
+                <hr class="widget-divider" style="border-top-color: rgba(0,0,0,0.2);">
+                <div class="widget-setpoint">
+                    <div class="widget-setpoint-label" style="color: white;">Current Temp:</div>
+                    <div class="widget-setpoint-value" style="color: white;">62.7°F</div>
+                </div>
+                <div class="widget-setpoint">
+                    <div class="widget-setpoint-label" style="color: white;">Heating / Cooling SP:</div>
+                    <div class="widget-setpoint-value" style="color: white;">70.0°F / 73.0°F</div>
+                </div>
+                <hr class="widget-divider" style="border-top-color: rgba(0,0,0,0.2);">
+                <div class="widget-status status-outside">Currently too cold</div>
+            </div>
+        </div>
+
+        <div class="widget widget-small" style="background-color: rgb(88, 88, 88);">
+            <div class="widget-rank" style="background-color: rgba(0,0,0,0.15);">
+                <h3 style="color: white;">#4</h3>
+            </div>
+            <div class="widget-content">
+                <div class="widget-percent" style="color: white;">95.1%</div>
+                <div class="widget-setpoint-label" style="color: white; opacity: 0.8;">Time Outside Setpoint</div>
+                <div class="widget-name" style="color: white;">FPVAV_D3</div>
+                <hr class="widget-divider" style="border-top-color: rgba(0,0,0,0.2);">
+                <div class="widget-setpoint">
+                    <div class="widget-setpoint-label" style="color: white;">Current Temp:</div>
+                    <div class="widget-setpoint-value" style="color: white;">69.9°F</div>
+                </div>
+                <div class="widget-setpoint">
+                    <div class="widget-setpoint-label" style="color: white;">Heating / Cooling SP:</div>
+                    <div class="widget-setpoint-value" style="color: white;">70.0°F / 73.0°F</div>
+                </div>
+                <hr class="widget-divider" style="border-top-color: rgba(0,0,0,0.2);">
+                <div class="widget-status status-outside">Currently too cold</div>
+            </div>
+        </div>
+
+        <div class="widget widget-small" style="background-color: rgb(92, 92, 92);">
+            <div class="widget-rank" style="background-color: rgba(0,0,0,0.15);">
+                <h3 style="color: white;">#5</h3>
+            </div>
+            <div class="widget-content">
+                <div class="widget-percent" style="color: white;">92.3%</div>
+                <div class="widget-setpoint-label" style="color: white; opacity: 0.8;">Time Outside Setpoint</div>
+                <div class="widget-name" style="color: white;">FPVAV_D6</div>
+                <hr class="widget-divider" style="border-top-color: rgba(0,0,0,0.2);">
+                <div class="widget-setpoint">
+                    <div class="widget-setpoint-label" style="color: white;">Current Temp:</div>
+                    <div class="widget-setpoint-value" style="color: white;">66.5°F</div>
+                </div>
+                <div class="widget-setpoint">
+                    <div class="widget-setpoint-label" style="color: white;">Heating / Cooling SP:</div>
+                    <div class="widget-setpoint-value" style="color: white;">70.0°F / 73.0°F</div>
+                </div>
+                <hr class="widget-divider" style="border-top-color: rgba(0,0,0,0.2);">
+                <div class="widget-status status-outside">Currently too cold</div>
             </div>
         </div>
 
